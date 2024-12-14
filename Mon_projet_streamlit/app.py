@@ -6,7 +6,7 @@ from sklearn.preprocessing import StandardScaler
 
 # Chargement du modèle et du scaler (gestion des erreurs incluse)
 try:
-    model = joblib.load('decision_tree_model.pkl')
+    model = joblib.load('decision_tree_model.pkl')  # Chemin relatif (recommandé)
 except FileNotFoundError:
     st.error("Le fichier du modèle 'decision_tree_model.pkl' est introuvable.")
     st.stop()
